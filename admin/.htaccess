@@ -1,0 +1,7 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteRule ^(.*)/(.*)/(.*)/$ index.php?c=module&f=modulePage&mod=$1&met=$2&id=$3 [L,QSA]
+RewriteRule ^(.*)/(.*)/$ index.php?c=module&f=modulePage&mod=$1&met=$2 [L,QSA]
+RewriteRule ^(.*)/$ index.php?c=module&f=modulePage&mod=$1&met=index [L,QSA]
+RewriteRule ^$ index.php?c=module&f=index&f=modulePage&mod=home&met=index [L,QSA]
